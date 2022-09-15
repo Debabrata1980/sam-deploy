@@ -1,0 +1,6 @@
+name: Github file to deploy sam template
+description: GitHub action that deploy the sam template
+
+runs:
+  using: docker
+  image: Dockerfile
