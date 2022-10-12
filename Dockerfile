@@ -1,11 +1,18 @@
 #FROM alpine:3.10
 FROM ubuntu:18.04
 
-RUN apk -v --no-cache --update add \
-        musl-dev \
-        gcc \
-        python3 \
-        python3-dev
+# Update
+RUN apt-get -y -q update
+
+# Install dependencies
+RUN apt-get -y -q install wget unzip python3 python3-pip
+
+# RUN apk -v --no-cache --update add \
+#        musl-dev \
+#        gcc \
+#        python3 \
+#        python3-dev
+
 RUN python3 -m ensurepip --upgrade \
         && pip3 install --upgrade pip
 RUN pip3 install --upgrade awscli aws-sam-cli
