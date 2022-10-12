@@ -19,7 +19,7 @@ args[2]="--config-file $3"
 fi
 
 #echo "Sam build  started..."
-sam build $({args[@]})
+sam build --template-file $1 --region $2 --config-file $3 
 echo "Sam build  finished..."
 echo "Sam deploy  started..."
 sam deploy --no-confirm-changeset --no-fail-on-empty-changeset $({args[@]})
