@@ -19,9 +19,11 @@ RUN apt-get -y -q install wget unzip python3 python3-pip
 RUN pip3 install --upgrade pip
         
 RUN pip3 install --upgrade awscli aws-sam-cli
-RUN pip3 uninstall --yes pip \
-        && apk del python3-dev gcc musl-dev
-RUN apk add --update nodejs npm
+#RUN pip3 uninstall --yes pip \
+#        && apk del python3-dev gcc musl-dev
+#RUN apk add --update nodejs npm
+RUN apt-get -y install nodejs
+RUN npm install
 
 COPY entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
