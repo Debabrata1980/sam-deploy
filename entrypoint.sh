@@ -2,9 +2,9 @@
 
 # Deploy the template using the SAM CLI
 
-echo $1
-echo $2
-echo $3
+echo $template
+echo $region
+echo $config-file
 
 args[0]="--template-file $1"
 
