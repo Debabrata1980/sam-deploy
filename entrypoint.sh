@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Deploy the template using the SAM CLI
 
