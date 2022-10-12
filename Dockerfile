@@ -26,6 +26,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
 #RUN apt-get -y install nodejs
 #RUN npm install
+RUN apt-get install -y locales
 
 COPY entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
