@@ -5,6 +5,7 @@
 echo $template
 echo $region
 echo $config-file
+echo "$@"
 
 args[0]="--template-file $1"
 
