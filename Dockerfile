@@ -13,8 +13,11 @@ RUN apt-get -y -q install wget unzip python3 python3-pip
 #        python3 \
 #        python3-dev
 
-RUN python3 -m ensurepip --upgrade \
-        && pip3 install --upgrade pip
+#RUN python3 -m ensurepip --upgrade \
+#        && pip3 install --upgrade pip
+
+RUN pip3 install --upgrade pip
+        
 RUN pip3 install --upgrade awscli aws-sam-cli
 RUN pip3 uninstall --yes pip \
         && apk del python3-dev gcc musl-dev
