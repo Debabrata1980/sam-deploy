@@ -1,6 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 # Deploy the template using the SAM CLI
+
+print $1
+print $2
+print $3
 
 args[0]="--template-file $1"
 
