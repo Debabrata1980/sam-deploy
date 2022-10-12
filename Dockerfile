@@ -22,8 +22,10 @@ RUN pip3 install --upgrade awscli aws-sam-cli
 #RUN pip3 uninstall --yes pip \
 #        && apk del python3-dev gcc musl-dev
 #RUN apk add --update nodejs npm
-RUN apt-get -y install nodejs
-RUN npm install
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
+RUN apt-get install --yes nodejs
+#RUN apt-get -y install nodejs
+#RUN npm install
 
 COPY entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
