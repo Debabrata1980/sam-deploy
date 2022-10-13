@@ -5,7 +5,7 @@
 echo "$1"
 echo "$2"
 echo "$3"
-echo "$@"
+echo "$*"
 
 args[0]="--template-file $1"
 
