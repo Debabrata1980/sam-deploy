@@ -10,7 +10,7 @@ inputs:
     description: 'AWS region to use in the aws cli.'
     required: false
     default: 'us-east-1'
-  config-file:
+  config:
     description: 'Path to the configuration file containing default parameter values to use.'
     required: false
     default: 'samconfig.toml'
@@ -21,5 +21,5 @@ runs:
   args:
     - ${{ inputs.template }}
     - ${{ inputs.region }}
-    - ${{ inputs.config-file }}
+    - ${{ inputs.config }}
 
