@@ -19,11 +19,15 @@ then
 args[2]="--config-file $3"
 fi
 
+template_file="$1"
+region="$2"
+config-file="$3"
+
 #echo "Sam build  started..."
-sh -c "sam build --template-file $1 --region $2 --config-file $3"
+sh -c "sam build -t ${template_file} --region ${region} --config-file ${config-file}
 echo "Sam build  finished..."
 echo "Sam deploy  started..."
-sh -c "sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --template-file $1 --region $2 --config-file $3"
+sh -c "sam deploy --no-confirm-changeset --no-fail-on-empty-changeset -t ${template_file} --region ${region} --config-file ${config-file}"
 if [ $? -ne 0 ]; then
   echo "SAM deploy error"
   exit 1
