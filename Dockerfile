@@ -1,4 +1,4 @@
-FROM alpine:3.13  
+FROM alpine:3.10 
 #3.10
 #FROM ubuntu:18.04
 
