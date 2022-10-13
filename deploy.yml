@@ -9,7 +9,7 @@ inputs:
   region:
     description: 'AWS region to use in the aws cli.'
     required: false
-    default: 'us-west-2'
+    default: 'us-east-1'
   config-file:
     description: 'Path to the configuration file containing default parameter values to use.'
     required: false
