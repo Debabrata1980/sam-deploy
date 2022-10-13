@@ -24,6 +24,9 @@ region="$2"
 config_file="$3"
 
 #echo "Sam build  started..."
+
+sam validate -t ${template_file} --region ${region}
+
 sh -c "sam build -t ${template_file} --region ${region}"
 echo "Sam build  finished..."
 echo "Sam deploy  started..."
