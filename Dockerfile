@@ -11,10 +11,10 @@ FROM alpine:3.10
 RUN apk -v --no-cache --update add \
         musl-dev \
         gcc \
-        python3.9 \
-        python3.9-dev
+        python3 \
+        python3-dev
 
-RUN python3.9 -m ensurepip --upgrade \
+RUN python3 -m ensurepip --upgrade \
         && pip3 install --upgrade pip
 
 #RUN pip3 install --upgrade pip
