@@ -11,7 +11,7 @@ echo "Sam build  started..."
 sam build --use-container  -t ${template_file} --region ${region}
 echo "Sam build  finished..."
 echo "Sam deploy  started..."
-sam deploy # --config-file ${config_file} -t ${template_file} --no-confirm-changeset --no-fail-on-empty-changeset  --region ${region}
+sam deploy  --config-file ${config_file} -t ${template_file} --no-confirm-changeset --no-fail-on-empty-changeset  --region ${region}
 if [ $? -ne 0 ]; then
   echo "SAM deploy error"
   exit 1
